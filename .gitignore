@@ -1,0 +1,43 @@
+# Build directories
+build/
+*.o
+*.a
+*.so
+*.lib
+*.exe
+*.elf
+*.hex
+*.bin
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Debug
+*.dSYM/
+*.su
+*.gch
+*.pch
+
+# Object files
+*.obj
+
+# Executable files
+*.out
+
+# Dependency files
+*.d
+
+# OS specific
+Thumbs.db
