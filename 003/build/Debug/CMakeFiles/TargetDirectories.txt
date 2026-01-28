@@ -1,0 +1,8 @@
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/CMakeFiles/zz.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/CMakeFiles/flash.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/CMakeFiles/flash_stlink.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/CMakeFiles/edit_cache.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/Seeli/Desktop/New Folder/zz/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
