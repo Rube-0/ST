@@ -106,9 +106,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // Feed the watchdog periodically
-    HAL_WWDG_Refresh(&hwwdg);
-    HAL_Delay(10); // Adjust delay as needed
+    // WWDG is refreshed in the Early Wakeup interrupt callback.
+    // Keep the main loop free for application logic.
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -161,8 +161,16 @@ void SystemClock_Config(void)
   */
 void HAL_WWDG_EarlyWakeupCallback(WWDG_HandleTypeDef *hwwdg)
 {
+  static uint32_t ewi_divider = 0;
+
   HAL_WWDG_Refresh(hwwdg);
-  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+
+  // Divide the fast EWI rate to make LED1 blinking visible.
+  if (++ewi_divider >= 100)
+  {
+    ewi_divider = 0;
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+  }
 }
 
 /* USER CODE END 4 */

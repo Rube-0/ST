@@ -60,7 +60,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if (htim->Instance == TIM6)
   {
     /* LED1状态取反，指示定时器更新事件（500ms） */
-    HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_PIN);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
   }
 }
 /* USER CODE END 0 */

@@ -101,7 +101,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     /* LED0每200ms翻转一次，指示程序运行 */
-    HAL_GPIO_TogglePin(LED0_GPIO_PORT, LED0_PIN);
+    HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
     HAL_Delay(200);
   }
   /* USER CODE END 3 */
