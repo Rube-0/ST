@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CMake Configure (Debug)",
+      "type": "shell",
+      "command": "cube-cmake",
+      "args": [
+        "--preset",
+        "Debug"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "CMake Build (Debug)",
+      "type": "shell",
+      "command": "cube-cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "Debug"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "OpenOCD Program (Debug)",
+      "type": "shell",
+      "command": "C:/Users/Peter/scoop/shims/openocd.exe",
+      "args": [
+        "-f",
+        "interface/cmsis-dap.cfg",
+        "-f",
+        "target/stm32f4x.cfg",
+        "-c",
+        "program build/Debug/OLED.elf verify reset exit"
+      ],
+      "dependsOn": "CMake Build (Debug)",
+      "problemMatcher": []
+    },
+    {
+      "label": "OpenOCD Server (CMSIS-DAP)",
+      "type": "shell",
+      "command": "C:/Users/Peter/scoop/shims/openocd.exe",
+      "args": [
+        "-f",
+        "interface/cmsis-dap.cfg",
+        "-f",
+        "target/stm32f4x.cfg"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
